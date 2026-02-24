@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<mavlink>
+	<version>1</version>
+	<messages>
+		<message id="205" name="RMBAS_DATA">
+			<description>RMBAS DATA</description>
+			<field type="int16_t" name="number">number</field>
+			<field type="int16_t" name="mode">mode</field>
+		</message>
+	</messages>
+</mavlink>
