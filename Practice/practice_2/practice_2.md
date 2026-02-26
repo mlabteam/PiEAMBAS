@@ -168,15 +168,11 @@ rc 8 1500
 
 Руководство для запуска Mission Planer в операционной системе Ubuntu находится [по ссылке](https://ardupilot.org/planner/docs/mission-planner-installation.html#mission-planner-on-linux) в разделе "Mission Planner on Linux".
 
-В команду запуска скрипита SITL добавьте агрумент `--no-mavproxy` для выключения mavproxy и включения возможности подключения через TCP.
+После ввода команд в три терминала, как описано в разделе "Этап 2", перейдите в Mission Planer, в правом верхнем углу выберете способ подключения TCP, нажмите "Connect" и подключитесь к ip `127.0.0.1` к порту `5762`.
 
-```bash
-python3 sim_vehicle.py -D -v ArduCopter -f JSON --add-param-file=$HOME/ardupilot_gazebo/config/gazebo-iris-gimbal.parm --console --map --no-mavproxy
-```
+Далее вы можете использовать SITL в Mission Planer уже знакомым вам способом, а также управлять дроном через mavproxy с помощью команд через средний терминал.
 
-После запуска данного скрипта, перейдите в Mission Planer, в правом верхнем углу выберете способ подключения TCP, нажмите "Connect" и подключитесь к ip `127.0.0.1` к порту `5760`.
 
-Далее вы используете SITL в Mission Planer уже знакомым вам способом.
 
 ### Этап 4 - Практическое задание
 
