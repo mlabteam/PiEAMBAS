@@ -66,10 +66,17 @@ gz sim -v4 -r shapes.sdf
 git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git
 ```
 
+Также установите зависимости, как показано в (руководстве)[Tools/environment_install/install-prereqs-ubuntu.sh -y]
+
 Для удобного использования нескольких терминалов установите утилиту:
 
 ```bash
 sudo apt install terminator
+```
+Также установите зависимости, необходимые для запуска видеопотока:
+
+```bash
+sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 ```
 
 ### Этап 2 - Запуск Gazebo SITL Ardupilot
@@ -207,3 +214,4 @@ python3 sim_vehicle.py -D -v ArduCopter -f JSON --add-param-file=$HOME/ardupilot
 #### Задание 3
 
 Необходимо запустить lua-скрипт возврата домой, написанный в рамках выполнения задания по курсу "АМБАС" и предоставить демонстрацию его работы в симуляторе Gazebo.
+
