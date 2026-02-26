@@ -66,7 +66,7 @@ gz sim -v4 -r shapes.sdf
 git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git
 ```
 
-Также установите зависимости, как показано в (руководстве)[Tools/environment_install/install-prereqs-ubuntu.sh -y]
+Также установите зависимости, как показано в [руководстве](Tools/environment_install/install-prereqs-ubuntu.sh -y)
 
 Для удобного использования нескольких терминалов установите утилиту:
 
@@ -214,4 +214,5 @@ python3 sim_vehicle.py -D -v ArduCopter -f JSON --add-param-file=$HOME/ardupilot
 #### Задание 3
 
 Необходимо запустить lua-скрипт возврата домой, написанный в рамках выполнения задания по курсу "АМБАС" и предоставить демонстрацию его работы в симуляторе Gazebo.
+
 
