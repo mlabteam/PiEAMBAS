@@ -63,10 +63,7 @@ sudo apt-get install ros-jazzy-ros-gz
 gz sim -v4 -r shapes.sdf
 ```
 
-При успешном запуске тестового скрипта, переходим к установке Gazebo SITL для Ardupilot.
-
-Осуществите установку Gazebo SITL для Ardupilot согласно [руководству по установке Ardupilot Gazebo](https://github.com/ArduPilot/ardupilot_gazebo/blob/main/README.md) разделы "Installation" и "Configure".
-
+При успешном запуске тестового скрипта, переходим к установке Ardupilot
 Клонируйте репозиторий Ardupilot:
 
 ```bash
@@ -79,6 +76,61 @@ Tools/environment_install/install-prereqs-ubuntu.sh -y
 ```
 ```bash
 . ~/.profile
+```
+
+**Закройте все терминалы и перезагрузите компьютер!**
+
+Переходим к установке Gazebo SITL для Ardupilot.
+
+Установим необходимые зависимости:
+```bash
+sudo apt update
+sudo apt install libgz-sim8-dev rapidjson-dev
+sudo apt install libopencv-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl
+```
+
+Установим необходимый пакет ROSDEP:
+```bash
+sudo rosdep init
+rosdep update
+```
+Создадим и перейдем в workspace для ROS2:
+```bash
+mkdir -p ~/ros2_ardupilot/src
+cd ~/ros2_ardupilot/src
+```
+
+Установим зависимости для нашей среды
+```bash
+export GZ_VERSION=harmonic # or garden or ionic
+sudo bash -c 'wget https://raw.githubusercontent.com/osrf/osrf-rosdep/master/gz/00-gazebo.list -O /etc/ros/rosdep/sources.list.d/00-gazebo.list'
+rosdep update
+rosdep resolve gz-harmonic # or gz-garden or gz-ionic
+# Navigate to your ROS workspace before the next command.
+rosdep install --from-paths src --ignore-src -y
+```
+Перейдем в домашниюю директорию:
+```bash
+cd
+```
+
+Склонируем и соберем Gazebo SITL для Ardupilot
+```bash
+git clone https://github.com/ArduPilot/ardupilot_gazebo
+cd ardupilot_gazebo
+mkdir build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make -j4
+```
+
+Запишем переменные окружения:
+```bash
+export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ardupilot_gazebo/build:$GZ_SIM_SYSTEM_PLUGIN_PATH
+export GZ_SIM_RESOURCE_PATH=$HOME/ardupilot_gazebo/models:$HOME/ardupilot_gazebo/worlds:$GZ_SIM_RESOURCE_PATH
+```
+```bash
+echo 'export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ardupilot_gazebo/build:${GZ_SIM_SYSTEM_PLUGIN_PATH}' >> ~/.bashrc
+echo 'export GZ_SIM_RESOURCE_PATH=$HOME/ardupilot_gazebo/models:$HOME/ardupilot_gazebo/worlds:${GZ_SIM_RESOURCE_PATH}' >> ~/.bashrc
 ```
 
 Для удобного использования нескольких терминалов установите утилиту:
