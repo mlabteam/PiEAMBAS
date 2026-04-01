@@ -57,7 +57,7 @@ source ~/.bashrc
 sudo apt-get install ros-jazzy-ros-gz
 ```
 
-Проверьте установку установку Gazebo Harmonic командой:
+Перезагрузите терминал и проверьте установку установку Gazebo Harmonic командой:
 
 ```bash
 gz sim -v4 -r shapes.sdf
@@ -72,8 +72,14 @@ gz sim -v4 -r shapes.sdf
 ```bash
 git clone --recurse-submodules https://github.com/ArduPilot/ardupilot.git
 ```
+Перейдите в директорию Ardupilot `cd ardupilot/` и установите зависимости:
 
-Также установите зависимости, как показано в [руководстве](https://ardupilot.org/dev/docs/building-setup-linux.html#install-some-required-packages)
+```bash
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+```
+```bash
+. ~/.profile
+```
 
 Для удобного использования нескольких терминалов установите утилиту:
 
@@ -85,6 +91,9 @@ sudo apt install terminator
 ```bash
 sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 ```
+
+**В конце перезагрузите компьютер!**
+
 
 ### Этап 2 - Запуск Gazebo SITL Ardupilot
 
