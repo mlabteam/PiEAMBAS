@@ -92,7 +92,7 @@ sudo apt install terminator
 sudo apt install gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 ```
 
-** Закройте все терминалы и перезагрузите компьютер!**
+**Закройте все терминалы и перезагрузите компьютер!**
 
 
 ### Этап 2 - Запуск Gazebo SITL Ardupilot
