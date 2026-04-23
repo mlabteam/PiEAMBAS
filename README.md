@@ -12,27 +12,14 @@
 [Практическое задание 2](https://github.com/mlabteam/PiEAMBAS/blob/main/Practice/practice_2/practice_2.md)
 Сдача до 05.03.2026
 
-[Практическое задание 3]()
+[Практическое задание 3](https://github.com/mlabteam/PiEAMBAS/blob/main/Practice/practice_3/practice_3.md)
 Сдача до 19.03.2026
 
-<<<<<<< HEAD
-[Практическое задание 4]()
-
-Сдача до 30.04.2026
-
-Практическое задание 5
-
-Сдача до 14.05.2026
-
-Практическое задание 6
-
-=======
-Практическое задание 4
+[Практическое задание 4](https://github.com/mlabteam/PiEAMBAS/blob/main/Practice/practice_4/practice_4.md)
 Сдача до 30.04.2026
 
 Практическое задание 5
 Сдача до 14.05.2026
 
 Практическое задание 6
->>>>>>> ba8945da636ea25816a741b62f68b9758afa1595
 Сдача до 28.05.2026
