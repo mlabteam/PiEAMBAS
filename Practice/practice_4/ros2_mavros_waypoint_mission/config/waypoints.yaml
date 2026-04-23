@@ -1,0 +1,6 @@
+waypoint_mission_node:
+  ros__parameters:
+
+    waypoints_x_m: [18.0, 38.0, 0.0, 0.0,10.0, 10.0]
+    waypoints_y_m: [21.0, 48.0, 8.0, 0.0, 10.0, 10.0]
+    waypoints_z_m: [15.0, 15.0, 15.0, 15.0, 15.0, 15.0]

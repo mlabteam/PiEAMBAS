@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <!-- Уникальное имя ROS2-пакета. -->
+  <name>ros2_mavros_takeoff</name>
+  <!-- Версия пакета по semver. -->
+  <version>0.0.1</version>
+  <!-- Краткое описание назначения пакета. -->
+  <description>ROS2 Python package for arming and takeoff via MAVROS.</description>
+  <!-- Контакт сопровождающего. -->
+  <maintainer email="user@example.com">user</maintainer>
+  <!-- Лицензия исходного кода. -->
+  <license>MIT</license>
+
+  <!-- Тип сборки для Python-пакета на ament. -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Runtime-зависимости. -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>mavros_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <!-- Явно указываем систему сборки для colcon/ament. -->
+    <build_type>ament_python</build_type>
+  </export>
+</package>
