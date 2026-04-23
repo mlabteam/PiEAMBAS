@@ -82,7 +82,7 @@ python3 sim_vehicle.py -D -v ArduCopter -f JSON --add-param-file=$HOME/ardupilot
 
 Дождитесь окончания компиляции и открытия всех окон SITL Ardupilot.
 
-#### В третьем терминале запустите MAVROS на пору 5062:
+#### В третьем терминале запустите MAVROS на порту 5762:
 
 ```bash
 ros2 launch mavros apm.launch fcu_url:=tcp://127.0.0.1:5762
