@@ -37,11 +37,11 @@ class DistanceHomeNode(Node):
         if self.current_pose is None or self.home_position is None:
             return None
 
-        '''
-        НАПИШИТЕ СЮДА СВОЙ КОД, КОТОРЫЙ ВЫЧИСЛЯЕТ РАССТОЯНИЕ ОТ ТЕКУЩЕЙ ПОЗИЦИИ ДО ДОМА И ВОЗВРАЩАЕТ ЕГО
-        
-        return 
-        '''
+        x, y, z = self.home_position
+        px = self.current_pose.pose.position.x
+        py = self.current_pose.pose.position.y
+        pz = self.current_pose.pose.position.z
+        return math.sqrt((px - x) ** 2 + (py - y) ** 2 + (pz - z) ** 2)
 
     def _pose_cb(self, msg: PoseStamped) -> None:
         self.current_pose = msg
