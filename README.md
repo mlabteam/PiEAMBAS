@@ -20,6 +20,3 @@
 
 [Практическое задание 5](https://github.com/mlabteam/PiEAMBAS/blob/main/Practice/practice_5/practice_5.md)
 Сдача до 28.05.2026
-
-Практическое задание 6
-Сдача до 28.05.2026
